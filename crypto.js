@@ -267,6 +267,10 @@ class CryptoModuleBrowser {
         return { privateKey, publicKey };
     }
 
+    getRandomValues(entropy) {
+        window.crypto.getRandomValues(entropy)
+    }
+
     generateAccount(wordCount = 12) {
         try {
             const validCounts = [6, 12, 15, 18, 21, 24, 48];
